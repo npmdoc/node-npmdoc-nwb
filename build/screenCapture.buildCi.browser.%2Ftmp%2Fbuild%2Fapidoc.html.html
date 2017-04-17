@@ -1,0 +1,4427 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/insin/nwb#readme">nwb (v0.15.6)</a>
+</h1>
+<h4>A toolkit for React, Preact &amp; Inferno apps, React libraries and other npm modules for the web, with no configuration (until you need it)</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb">module nwb</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin">
+            function <span class="apidocSignatureSpan">nwb.</span>WebpackStatusPlugin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createBabelConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createBabelConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeInfernoAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeInfernoAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServePreactAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServePreactAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeReactAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeReactAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeWebAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeWebAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServerWebpackConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServerWebpackConfig
+            <span class="apidocSignatureSpan">(args, buildConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.debug">
+            function <span class="apidocSignatureSpan">nwb.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.devServer">
+            function <span class="apidocSignatureSpan">nwb.</span>devServer
+            <span class="apidocSignatureSpan">(webpackConfig, _ref, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.express">
+            function <span class="apidocSignatureSpan">nwb.</span>express
+            <span class="apidocSignatureSpan">(express)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getPluginConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>getPluginConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.karmaServer">
+            function <span class="apidocSignatureSpan">nwb.</span>karmaServer
+            <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.moduleBuild">
+            function <span class="apidocSignatureSpan">nwb.</span>moduleBuild
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackBuild">
+            function <span class="apidocSignatureSpan">nwb.</span>webpackBuild
+            <span class="apidocSignatureSpan">(name, args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackServer">
+            function <span class="apidocSignatureSpan">nwb.</span>webpackServer
+            <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>WebpackStatusPlugin.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>appConfig</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>createKarmaConfig</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>createProject</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>createWebpackConfig</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>errors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>getUserConfig</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.</span>webpackUtils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.WebpackStatusPlugin">module nwb.WebpackStatusPlugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.WebpackStatusPlugin">
+            function <span class="apidocSignatureSpan">nwb.</span>WebpackStatusPlugin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.WebpackStatusPlugin.prototype">module nwb.WebpackStatusPlugin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.apply">
+            function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>apply
+            <span class="apidocSignatureSpan">(compiler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.clearConsole">
+            function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>clearConsole
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.done">
+            function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>done
+            <span class="apidocSignatureSpan">(stats)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.log">
+            function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>log
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.watchRun">
+            function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>watchRun
+            <span class="apidocSignatureSpan">(watching, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.appConfig">module nwb.appConfig</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.appConfig.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.appConfig.getDefaultHTMLConfig">
+            function <span class="apidocSignatureSpan">nwb.appConfig.</span>getDefaultHTMLConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createBabelConfig">module nwb.createBabelConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createBabelConfig.createBabelConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createBabelConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createKarmaConfig">module nwb.createKarmaConfig</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createKarmaConfig.default">
+            function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>default
+            <span class="apidocSignatureSpan">(args, buildConfig, userConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createKarmaConfig.findPlugin">
+            function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>findPlugin
+            <span class="apidocSignatureSpan">(plugins, findId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createKarmaConfig.getKarmaPluginConfig">
+            function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>getKarmaPluginConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createKarmaConfig.processPluginConfig">
+            function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>processPluginConfig
+            <span class="apidocSignatureSpan">(configs)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createProject">module nwb.createProject</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.createProject.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createProject.default">
+            function <span class="apidocSignatureSpan">nwb.createProject.</span>default
+            <span class="apidocSignatureSpan">(args, type, name, dir, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createProject.getNpmModulePrefs">
+            function <span class="apidocSignatureSpan">nwb.createProject.</span>getNpmModulePrefs
+            <span class="apidocSignatureSpan">(args, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createProject.validateProjectType">
+            function <span class="apidocSignatureSpan">nwb.createProject.</span>validateProjectType
+            <span class="apidocSignatureSpan">(projectType)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createServeInfernoAppConfig">module nwb.createServeInfernoAppConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeInfernoAppConfig.createServeInfernoAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeInfernoAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createServePreactAppConfig">module nwb.createServePreactAppConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServePreactAppConfig.createServePreactAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServePreactAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createServeReactAppConfig">module nwb.createServeReactAppConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeReactAppConfig.createServeReactAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeReactAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createServeWebAppConfig">module nwb.createServeWebAppConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServeWebAppConfig.createServeWebAppConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServeWebAppConfig
+            <span class="apidocSignatureSpan">(args, overrides)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createServerWebpackConfig">module nwb.createServerWebpackConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createServerWebpackConfig.createServerWebpackConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>createServerWebpackConfig
+            <span class="apidocSignatureSpan">(args, buildConfig)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.createWebpackConfig">module nwb.createWebpackConfig</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.createExtraRules">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createExtraRules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.createPlugins">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createPlugins
+            <span class="apidocSignatureSpan">(server)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.createRules">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createRules
+            <span class="apidocSignatureSpan">(server)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.createStyleLoaders">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createStyleLoaders
+            <span class="apidocSignatureSpan">(loader, server, userWebpackConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.default">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>default
+            <span class="apidocSignatureSpan">(buildConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.getCompatConfig">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>getCompatConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.mergeRuleConfig">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>mergeRuleConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.ruleConfigFactory">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>ruleConfigFactory
+            <span class="apidocSignatureSpan">(buildConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.createWebpackConfig.styleRuleName">
+            function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>styleRuleName
+            <span class="apidocSignatureSpan">(prefix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>COMPAT_CONFIGS</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.debug">module nwb.debug</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.debug.</span>enabled</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.debug.</span>useColors</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.debug.debug">
+            function <span class="apidocSignatureSpan">nwb.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nwb.debug.</span>color</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nwb.debug.</span>inspectOpts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nwb.debug.</span>namespace</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.devServer">module nwb.devServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.devServer.devServer">
+            function <span class="apidocSignatureSpan">nwb.</span>devServer
+            <span class="apidocSignatureSpan">(webpackConfig, _ref, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.errors">module nwb.errors</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.errors.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.errors.ConfigValidationError">
+            function <span class="apidocSignatureSpan">nwb.errors.</span>ConfigValidationError
+            <span class="apidocSignatureSpan">(report)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.errors.KarmaExitCodeError">
+            function <span class="apidocSignatureSpan">nwb.errors.</span>KarmaExitCodeError
+            <span class="apidocSignatureSpan">(exitCode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.errors.UserError">
+            function <span class="apidocSignatureSpan">nwb.errors.</span>UserError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.express">module nwb.express</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.express.express">
+            function <span class="apidocSignatureSpan">nwb.</span>express
+            <span class="apidocSignatureSpan">(express)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.getPluginConfig">module nwb.getPluginConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getPluginConfig.getPluginConfig">
+            function <span class="apidocSignatureSpan">nwb.</span>getPluginConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.getUserConfig">module nwb.getUserConfig</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.getUserConfig.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getUserConfig.UserConfigReport">
+            function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>UserConfigReport
+            <span class="apidocSignatureSpan">(configPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getUserConfig.default">
+            function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>default
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getUserConfig.prepareWebpackRuleConfig">
+            function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>prepareWebpackRuleConfig
+            <span class="apidocSignatureSpan">(rules)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.getUserConfig.processUserConfig">
+            function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>processUserConfig
+            <span class="apidocSignatureSpan">(_ref4)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.karmaServer">module nwb.karmaServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.karmaServer.karmaServer">
+            function <span class="apidocSignatureSpan">nwb.</span>karmaServer
+            <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.moduleBuild">module nwb.moduleBuild</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.moduleBuild.moduleBuild">
+            function <span class="apidocSignatureSpan">nwb.</span>moduleBuild
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.utils">module nwb.utils</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.utils.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.clean">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>clean
+            <span class="apidocSignatureSpan">(desc, dirs, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.clearConsole">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>clearConsole
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.deepToString">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>deepToString
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.getArgsPlugins">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>getArgsPlugins
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.install">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>install
+            <span class="apidocSignatureSpan">(packages, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.joinAnd">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>joinAnd
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.toSource">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>toSource
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.typeOf">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>typeOf
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.utils.unique">
+            function <span class="apidocSignatureSpan">nwb.utils.</span>unique
+            <span class="apidocSignatureSpan">(strings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.webpackBuild">module nwb.webpackBuild</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackBuild.webpackBuild">
+            function <span class="apidocSignatureSpan">nwb.</span>webpackBuild
+            <span class="apidocSignatureSpan">(name, args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.webpackServer">module nwb.webpackServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackServer.webpackServer">
+            function <span class="apidocSignatureSpan">nwb.</span>webpackServer
+            <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nwb.webpackUtils">module nwb.webpackUtils</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nwb.webpackUtils.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackUtils.createBanner">
+            function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>createBanner
+            <span class="apidocSignatureSpan">(pkg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackUtils.createExternals">
+            function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>createExternals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackUtils.logBuildResults">
+            function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logBuildResults
+            <span class="apidocSignatureSpan">(stats, spinner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackUtils.logErrorsAndWarnings">
+            function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logErrorsAndWarnings
+            <span class="apidocSignatureSpan">(stats)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nwb.webpackUtils.logGzippedFileSizes">
+            function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logGzippedFileSizes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb" id="apidoc.module.nwb">module nwb</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin" id="apidoc.element.nwb.WebpackStatusPlugin">
+        function <span class="apidocSignatureSpan">nwb.</span>WebpackStatusPlugin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StatusPlugin() {
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
+      _ref$message = _ref.message,
+      message = _ref$message === undefined ? '' : _ref$message,
+      _ref$middleware = _ref.middleware,
+      middleware = _ref$middleware === undefined ? false : _ref$middleware,
+      _ref$test = _ref.test,
+      test = _ref$test === undefined ? false : _ref$test;
+
+  _classCallCheck(this, StatusPlugin);
+
+  // Provides details of the URL the dev server is available at
+  this.message = message;
+  // Flag: don't clear the console as we're in someone else's server
+  this.middleware = middleware;
+  // Flag: ONLY log errors and warnings
+  this.test = test;
+
+  // We only want to display the "Starting..." message once
+  this.initial = true;
+
+  this.watchRun = this.watchRun.bind(this);
+  this.done = this.done.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createBabelConfig" id="apidoc.element.nwb.createBabelConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createBabelConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createBabelConfig() {
+  var buildConfig = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+  var userConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var commonJSInterop = buildConfig.commonJSInterop,
+      env = buildConfig.env,
+      _buildConfig$modules = buildConfig.modules,
+      modules = _buildConfig$modules === undefined ? false : _buildConfig$modules,
+      _buildConfig$plugins = buildConfig.plugins,
+      buildPlugins = _buildConfig$plugins === undefined ? [] : _buildConfig$plugins,
+      buildPresets = buildConfig.presets,
+      setRuntimePath = buildConfig.setRuntimePath,
+      _buildConfig$stage = buildConfig.stage,
+      buildStage = _buildConfig$stage === undefined ? DEFAULT_STAGE : _buildConfig$stage,
+      _buildConfig$webpack = buildConfig.webpack,
+      webpack = _buildConfig$webpack === undefined ? true : _buildConfig$webpack;
+  var cherryPick = userConfig.cherryPick,
+      loose = userConfig.loose,
+      _userConfig$plugins = userConfig.plugins,
+      userPlugins = _userConfig$plugins === undefined ? [] : _userConfig$plugins,
+      userPresets = userConfig.presets,
+      userRuntime = userConfig.runtime,
+      userStage = userConfig.stage;
+
+
+  var presets = [];
+  var plugins = [];
+
+  // Default to loose mode unless explicitly configured
+  if ((0, _utils.typeOf)(loose) === 'undefined') {
+    loose = true;
+  }
+
+  // ES2015 and ES2016 presets
+  presets.push([require.resolve('babel-preset-es2015'), { loose, modules }], require.resolve('babel-preset-es2016'));
+
+  // Stage preset
+  var stage = userStage != null ? userStage : buildStage;
+  if (typeof stage == 'number') {
+    presets.push(require.resolve(`babel-preset-stage-${stage}`));
+    // Decorators are stage 2 but not supported by Babel yet - add the legacy
+    // transform for support in the meantime.
+    if (stage &lt;= 2) {
+      plugins.push(require.resolve('babel-plugin-transform-decorators-legacy'));
+    }
+  }
+
+  // Additional build presets
+  if (Array.isArray(buildPresets)) {
+    buildPresets.forEach(function (preset) {
+      if (preset === 'inferno') {
+        presets.push(require.resolve('../babel-presets/inferno'));
+      } else if (preset === 'preact') {
+        presets.push(require.resolve('../babel-presets/preact'));
+      } else if (preset === 'react') {
+        presets.push(require.resolve('babel-preset-react'));
+        if (process.env.NODE_ENV === 'development') {
+          plugins.push(require.resolve('babel-plugin-transform-react-jsx-source'), require.resolve('babel-plugin-transform-react
+-jsx-self'));
+        }
+      } else if (preset === 'react-hmre') {
+        presets.push(require.resolve('../babel-presets/react-hmre'));
+      } else if (preset === 'react-prod') {
+        presets.push(require.resolve('../babel-presets/react-prod'));
+      } else {
+        throw new Error(`Unknown build preset: ${preset}`);
+      }
+    });
+  }
+
+  if (userPresets) {
+    presets = [].concat(presets, userPresets);
+  }
+
+  var config = { presets };
+
+  plugins = plugins.concat(buildPlugins, userPlugins);
+
+  // The Runtime transform imports various things into a module based on usage.
+  // Turn regenerator on by default to enable use of async/await and generators
+  // without configuration.
+  var runtimeTransformOptions = {
+    helpers: false,
+    polyfill: false,
+    regenerator: true
+  };
+  if (setRuntimePath !== false) {
+    runtimeTransformOptions.moduleName = RUNTIME_PATH;
+  }
+  if (userRuntime !== false) {
+    if (userRuntime === true) {
+      // Enable all features
+      runtimeTransformOptions = {};
+      if (setRuntimePath !== false) {
+        runtimeTransformOptions.moduleName = RUNTIME_PATH;
+      }
+    } else if ((0, _utils.typeOf)(userRuntime) === 'string') {
+      // Enable the named feature
+      runtimeTransformOptions[userRuntime] = true;
+    }
+    plugins.push([require.resolve('babel-plugin-transform-runtime'), runtimeTransformOptions]);
+  }
+
+  // Allow Babel to parse (but not transform) import() when used with Webpack
+  if (webpack) {
+    plugins.push(require.resolve('babel- ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeInfernoAppConfig" id="apidoc.element.nwb.createServeInfernoAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeInfernoAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeInfernoAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['inferno']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    },
+    resolve: {
+      alias: {
+        'react': 'inferno-compat',
+        'react-dom': 'inferno-compat'
+      }
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServePreactAppConfig" id="apidoc.element.nwb.createServePreactAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServePreactAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServePreactAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['preact']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    },
+    resolve: {
+      alias: {
+        'react': 'preact-compat/dist/preact-compat',
+        'react-dom': 'preact-compat/dist/preact-compat'
+      }
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeReactAppConfig" id="apidoc.element.nwb.createServeReactAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeReactAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeReactAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['react', 'react-hmre']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeWebAppConfig" id="apidoc.element.nwb.createServeWebAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeWebAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeWebAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServerWebpackConfig" id="apidoc.element.nwb.createServerWebpackConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServerWebpackConfig
+        <span class="apidocSignatureSpan">(args, buildConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServerWebpackConfig(args, buildConfig) {
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var pluginConfig = (0, _getPluginConfig2.default)({ args });
+
+  var entry = buildConfig.entry,
+      output = buildConfig.output,
+      _buildConfig$plugins = buildConfig.plugins,
+      plugins = _buildConfig$plugins === undefined ? {} : _buildConfig$plugins,
+      otherBuildConfig = _objectWithoutProperties(buildConfig, ['entry', 'output', 'plugins']);
+
+  var hotMiddlewareOptions = args.reload ? '?reload=true' : '';
+
+  if (args['auto-install'] || args.install) {
+    plugins.autoInstall = true;
+  }
+
+  return (0, _createWebpackConfig2.default)(_extends({
+    server: true,
+    devtool: 'cheap-module-source-map',
+    entry: [
+    // Polyfill EventSource for IE, as webpack-hot-middleware/client uses it
+    require.resolve('eventsource-polyfill'), require.resolve('webpack-hot-middleware/client') + hotMiddlewareOptions].concat(entry
+),
+    output,
+    plugins
+  }, otherBuildConfig), pluginConfig, userConfig);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.debug" id="apidoc.element.nwb.debug">
+        function <span class="apidocSignatureSpan">nwb.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &lt; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if ('string' !== typeof args[0]) {
+    // anything else let's inspect with %O
+    args.unshift('%O');
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don't increase the array index
+    if (match === '%%') return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if ('function' === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it's inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.devServer" id="apidoc.element.nwb.devServer">
+        function <span class="apidocSignatureSpan">nwb.</span>devServer
+        <span class="apidocSignatureSpan">(webpackConfig, _ref, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function server(webpackConfig, _ref, cb) {
+  var fallback = _ref.fallback,
+      host = _ref.host,
+      port = _ref.port,
+      staticPath = _ref.staticPath;
+
+  var app = (0, _express2.default)();
+  var compiler = (0, _webpack2.default)(webpackConfig);
+
+  if (fallback !== false) {
+    app.use((0, _connectHistoryApiFallback2.default)());
+  }
+
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    quiet: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  }));
+
+  app.use(require('webpack-hot-middleware')(compiler, {
+    log: false
+  }));
+
+  function onServerStart(err) {
+    if (err) return cb(err);
+  }
+
+  // Only provide host config if it was explicitly specified by the user
+  if (host) {
+    app.listen(port, host, onServerStart);
+  } else {
+    app.listen(port, onServerStart);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.express" id="apidoc.element.nwb.express">
+        function <span class="apidocSignatureSpan">nwb.</span>express
+        <span class="apidocSignatureSpan">(express)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nwbMiddleware(express) {
+  var options = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  (0, _assert2.default)(express &amp;&amp; typeof express.Router === 'function', 'The express module must be passed as the first argument
+ to nwb middleware');
+
+  // We need to do an intial grab of the user config to determine the project
+  // type.
+  var userConfig = (0, _getUserConfig2.default)({ _: ['serve'], config: options.config }, { required: true });
+  if (!SERVE_APP_CONFIG[userConfig.type]) {
+    throw new Error(`nwb Express middleware is unable to serve anything for a ${userConfig.type} project.`);
+  }
+
+  var createServeAppConfig = require(SERVE_APP_CONFIG[userConfig.type]);
+
+  // Use options to create an object equivalent to CLI args parsed by minimist
+  var args = {
+    _: [`serve-${userConfig.type}`, options.entry],
+    config: options.config,
+    install: !!options.install || !!options.autoInstall,
+    reload: !!options.reload
+  };
+
+  var webpackConfig = (0, _createServerWebpackConfig2.default)(args, createServeAppConfig(args, {
+    plugins: {
+      status: {
+        middleware: true
+      }
+    }
+  }));
+
+  (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+  var compiler = (0, _webpack2.default)(webpackConfig);
+
+  var router = express.Router();
+
+  router.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    quiet: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  }));
+
+  router.use(require('webpack-hot-middleware')(compiler, {
+    log: false
+  }));
+
+  return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getPluginConfig" id="apidoc.element.nwb.getPluginConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>getPluginConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPluginConfig() {
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
+      _ref$args = _ref.args,
+      args = _ref$args === undefined ? {} : _ref$args,
+      _ref$cwd = _ref.cwd,
+      cwd = _ref$cwd === undefined ? process.cwd() : _ref$cwd;
+
+  var plugins = [];
+
+  try {
+    var pkgPlugins = plugins.concat(getPackagePlugins(cwd));
+    (0, _debug2.default)('%s nwb-* dependencies in package.json', pkgPlugins.length);
+    plugins = plugins.concat(pkgPlugins);
+  } catch (e) {
+    // pass
+  }
+
+  var argsPlugins = (0, _utils.getArgsPlugins)(args);
+  if (argsPlugins.length !== 0) {
+    (0, _debug2.default)('%s plugins in arguments', argsPlugins.length);
+    plugins = plugins.concat(argsPlugins);
+  }
+
+  if (plugins.length === 0) {
+    return {};
+  }
+
+  plugins = (0, _utils.unique)(plugins);
+  (0, _debug2.default)('nwb plugins: %o', plugins);
+
+  var pluginConfig = {};
+  plugins.forEach(function (plugin) {
+    var pluginModule = require(_resolve2.default.sync(plugin, { basedir: cwd }));
+    pluginConfig = (0, _webpackMerge2.default)(pluginConfig, pluginModule);
+  });
+
+  (0, _debug2.default)('plugin config: %s', (0, _utils.deepToString)(pluginConfig));
+
+  return pluginConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.karmaServer" id="apidoc.element.nwb.karmaServer">
+        function <span class="apidocSignatureSpan">nwb.</span>karmaServer
+        <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function karmaServer(args, buildConfig, cb) {
+  // Force the environment to test
+  process.env.NODE_ENV = 'test';
+
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var karmaConfig = (0, _createKarmaConfig2.default)(args, buildConfig, userConfig);
+
+  new _karma.Server(karmaConfig, function (exitCode) {
+    if (exitCode !== 0) return cb(new _errors.KarmaExitCodeError(exitCode));
+    cb();
+  }).start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.moduleBuild" id="apidoc.element.nwb.moduleBuild">
+        function <span class="apidocSignatureSpan">nwb.</span>moduleBuild
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moduleBuild(args) {
+  var buildConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var cb = arguments[2];
+
+  // XXX Babel doesn't support passing the path to a babelrc file any more
+  if (_glob2.default.sync('.babelrc').length &gt; 0) {
+    throw new _errors.UserError('Unable to build the module as there is a .babelrc in your project', 'nwb needs to write a temporary
+ .babelrc to configure the build');
+  }
+
+  var src = _path2.default.resolve('src');
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var copyFiles = !!args['copy-files'];
+
+  var tasks = [function (cb) {
+    return (0, _cleanModule2.default)(args, cb);
+  }, function (cb) {
+    return runBabel('ES5', { copyFiles, outDir: _path2.default.resolve('lib'), src }, (0, _webpackMerge2.default)(buildConfig.babel
+, buildConfig.babelDev || {}, {
+      // Don't force ES5 users of the ES5 build to eat a .require
+      commonJSInterop: true,
+      // Transpile modules to CommonJS for ES5 users
+      modules: 'commonjs',
+      // Don't set the path to nwb's babel-runtime, as it will need to be a
+      // peerDependency of your module if you use transform-runtime's helpers
+      // option.
+      setRuntimePath: false,
+      // Don't enable webpack-specific plugins
+      webpack: false
+    }), userConfig.babel, cb);
+  }];
+
+  // The ES6 modules build is enabled by default, and must be explicitly
+  // disabled if you don't want it.
+  if (userConfig.npm.esModules !== false) {
+    tasks.push(function (cb) {
+      return runBabel('ES6 modules', { copyFiles, outDir: _path2.default.resolve('es'), src }, (0, _webpackMerge2.default)(buildConfig
+.babel, buildConfig.babelDev || {}, {
+        // Don't set the path to nwb's babel-runtime, as it will need to be a
+        // peerDependency of your module if you use transform-runtime's helpers
+        // option.
+        setRuntimePath: false,
+        // Don't enable webpack-specific plugins
+        webpack: false
+      }), userConfig.babel, cb);
+    });
+  }
+
+  // The UMD build must be explicitly enabled
+  if (userConfig.npm.umd) {
+    tasks.push(function (cb) {
+      return buildUMD(args, buildConfig, userConfig, cb);
+    });
+  }
+
+  (0, _runSeries2.default)(tasks, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackBuild" id="apidoc.element.nwb.webpackBuild">
+        function <span class="apidocSignatureSpan">nwb.</span>webpackBuild
+        <span class="apidocSignatureSpan">(name, args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function webpackBuild(name, args, buildConfig, cb) {
+  if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = 'production';
+  }
+
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var pluginConfig = (0, _getPluginConfig2.default)({ args });
+  if (typeof buildConfig == 'function') {
+    buildConfig = buildConfig(args);
+  }
+
+  var webpackConfig = (0, _createWebpackConfig2.default)(buildConfig, pluginConfig, userConfig);
+
+  (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+  var spinner = void 0;
+  if (name) {
+    spinner = (0, _ora2.default)(`Building ${name}`).start();
+  }
+  var compiler = (0, _webpack2.default)(webpackConfig);
+  compiler.run(function (err, stats) {
+    if (err) {
+      if (spinner) {
+        spinner.fail();
+      }
+      return cb(err);
+    }
+    if (spinner) {
+      (0, _webpackUtils.logBuildResults)(stats, spinner);
+    }
+    cb(null, stats);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackServer" id="apidoc.element.nwb.webpackServer">
+        function <span class="apidocSignatureSpan">nwb.</span>webpackServer
+        <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function webpackServer(args, buildConfig, cb) {
+  // Default environment to development - we also run the dev server while
+  // testing to check that HMR works.
+  if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = 'development';
+  }
+
+  if (typeof buildConfig == 'function') {
+    buildConfig = buildConfig(args);
+  }
+
+  // Other config can be provided by the user via the CLI
+  getServerOptions(args, function (err, options) {
+    if (err) return cb(err);
+    if (options === null) return cb();
+
+    if (!('status' in buildConfig.plugins)) {
+      buildConfig.plugins.status = {
+        message: `The app is running at http://${options.host || 'localhost'}:${options.port}/`
+      };
+    }
+
+    var webpackConfig = (0, _createServerWebpackConfig2.default)(args, buildConfig);
+
+    (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+    (0, _devServer2.default)(webpackConfig, options, cb);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.WebpackStatusPlugin" id="apidoc.module.nwb.WebpackStatusPlugin">module nwb.WebpackStatusPlugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.WebpackStatusPlugin" id="apidoc.element.nwb.WebpackStatusPlugin.WebpackStatusPlugin">
+        function <span class="apidocSignatureSpan">nwb.</span>WebpackStatusPlugin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StatusPlugin() {
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
+      _ref$message = _ref.message,
+      message = _ref$message === undefined ? '' : _ref$message,
+      _ref$middleware = _ref.middleware,
+      middleware = _ref$middleware === undefined ? false : _ref$middleware,
+      _ref$test = _ref.test,
+      test = _ref$test === undefined ? false : _ref$test;
+
+  _classCallCheck(this, StatusPlugin);
+
+  // Provides details of the URL the dev server is available at
+  this.message = message;
+  // Flag: don't clear the console as we're in someone else's server
+  this.middleware = middleware;
+  // Flag: ONLY log errors and warnings
+  this.test = test;
+
+  // We only want to display the "Starting..." message once
+  this.initial = true;
+
+  this.watchRun = this.watchRun.bind(this);
+  this.done = this.done.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.WebpackStatusPlugin.prototype" id="apidoc.module.nwb.WebpackStatusPlugin.prototype">module nwb.WebpackStatusPlugin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.apply" id="apidoc.element.nwb.WebpackStatusPlugin.prototype.apply">
+        function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>apply
+        <span class="apidocSignatureSpan">(compiler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function apply(compiler) {
+  compiler.plugin('watch-run', this.watchRun);
+  compiler.plugin('done', this.done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    chunksSortMode: 'dependency',
+    template: _path2.default.join(__dirname, '../templates/webpack-template.html')
+  }, buildConfig.html, userConfig.html)));
+}
+
+// Copy static resources
+if (buildConfig.copy) {
+  plugins.push(new (Function.prototype.bind.<span class="apidocCodeKeywordSpan">apply</span>(_copyWebpackPlugin2.default, [null].
+concat(getCopyPluginArgs(buildConfig.copy, userConfig.copy))))());
+}
+
+// Automatically install missing npm dependencies and add them to package.json
+// Must be enabled with an --install or --auto-install flag
+if (buildConfig.autoInstall) {
+  plugins.push(new _npmInstallWebpackPlugin2.default(_extends({
+    peerDependencies: false,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.clearConsole" id="apidoc.element.nwb.WebpackStatusPlugin.prototype.clearConsole">
+        function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>clearConsole
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearConsole() {
+  if (!this.test) {
+    (0, _utils.clearConsole)();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!this.test) {
+    console.log(message);
+  }
+};
+
+StatusPlugin.prototype.watchRun = function watchRun(watching, cb) {
+  if (!this.middleware) {
+    this.<span class="apidocCodeKeywordSpan">clearConsole</span>();
+  }
+  if (this.initial) {
+    this.log(_chalk2.default.cyan('Starting Webpack compilation...'));
+    this.initial = false;
+  } else {
+    this.log('Recompiling...');
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.done" id="apidoc.element.nwb.WebpackStatusPlugin.prototype.done">
+        function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>done
+        <span class="apidocSignatureSpan">(stats)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function done(stats) {
+  if (!this.middleware) {
+    this.clearConsole();
+  }
+
+  var hasErrors = stats.hasErrors();
+  var hasWarnings = stats.hasWarnings();
+
+  if (!hasErrors &amp;&amp; !hasWarnings) {
+    var time = stats.endTime - stats.startTime;
+    this.log(_chalk2.default.green(`Compiled successfully in ${time} ms.`));
+  } else {
+    (0, _webpackUtils.logErrorsAndWarnings)(stats);
+    if (hasErrors) return;
+  }
+
+  if (!this.middleware) {
+    this.log('');
+    this.log(this.message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.log" id="apidoc.element.nwb.WebpackStatusPlugin.prototype.log">
+        function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>log
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log(message) {
+  if (!this.test) {
+    console.log(message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!this.test) {
+    (0, _utils.clearConsole)();
+  }
+};
+
+StatusPlugin.prototype.log = function log(message) {
+  if (!this.test) {
+    console.<span class="apidocCodeKeywordSpan">log</span>(message);
+  }
+};
+
+StatusPlugin.prototype.watchRun = function watchRun(watching, cb) {
+  if (!this.middleware) {
+    this.clearConsole();
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.WebpackStatusPlugin.prototype.watchRun" id="apidoc.element.nwb.WebpackStatusPlugin.prototype.watchRun">
+        function <span class="apidocSignatureSpan">nwb.WebpackStatusPlugin.prototype.</span>watchRun
+        <span class="apidocSignatureSpan">(watching, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watchRun(watching, cb) {
+  if (!this.middleware) {
+    this.clearConsole();
+  }
+  if (this.initial) {
+    this.log(_chalk2.default.cyan('Starting Webpack compilation...'));
+    this.initial = false;
+  } else {
+    this.log('Recompiling...');
+  }
+  cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.appConfig" id="apidoc.module.nwb.appConfig">module nwb.appConfig</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.appConfig.getDefaultHTMLConfig" id="apidoc.element.nwb.appConfig.getDefaultHTMLConfig">
+        function <span class="apidocSignatureSpan">nwb.appConfig.</span>getDefaultHTMLConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDefaultHTMLConfig() {
+  var cwd = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : process.cwd();
+
+  // Use the default HTML template path if it exists
+  if (_glob2.default.sync(DEFAULT_HTML_PATH, { cwd }).length &gt; 0) {
+    return {
+      template: DEFAULT_HTML_PATH
+    };
+  }
+  // Otherwise provide default variables for the internal template, in case we
+  // fall back to it.
+  return {
+    mountId: 'app',
+    title: require(_path2.default.join(cwd, 'package.json')).name
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createBabelConfig" id="apidoc.module.nwb.createBabelConfig">module nwb.createBabelConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createBabelConfig.createBabelConfig" id="apidoc.element.nwb.createBabelConfig.createBabelConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createBabelConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createBabelConfig() {
+  var buildConfig = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+  var userConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var commonJSInterop = buildConfig.commonJSInterop,
+      env = buildConfig.env,
+      _buildConfig$modules = buildConfig.modules,
+      modules = _buildConfig$modules === undefined ? false : _buildConfig$modules,
+      _buildConfig$plugins = buildConfig.plugins,
+      buildPlugins = _buildConfig$plugins === undefined ? [] : _buildConfig$plugins,
+      buildPresets = buildConfig.presets,
+      setRuntimePath = buildConfig.setRuntimePath,
+      _buildConfig$stage = buildConfig.stage,
+      buildStage = _buildConfig$stage === undefined ? DEFAULT_STAGE : _buildConfig$stage,
+      _buildConfig$webpack = buildConfig.webpack,
+      webpack = _buildConfig$webpack === undefined ? true : _buildConfig$webpack;
+  var cherryPick = userConfig.cherryPick,
+      loose = userConfig.loose,
+      _userConfig$plugins = userConfig.plugins,
+      userPlugins = _userConfig$plugins === undefined ? [] : _userConfig$plugins,
+      userPresets = userConfig.presets,
+      userRuntime = userConfig.runtime,
+      userStage = userConfig.stage;
+
+
+  var presets = [];
+  var plugins = [];
+
+  // Default to loose mode unless explicitly configured
+  if ((0, _utils.typeOf)(loose) === 'undefined') {
+    loose = true;
+  }
+
+  // ES2015 and ES2016 presets
+  presets.push([require.resolve('babel-preset-es2015'), { loose, modules }], require.resolve('babel-preset-es2016'));
+
+  // Stage preset
+  var stage = userStage != null ? userStage : buildStage;
+  if (typeof stage == 'number') {
+    presets.push(require.resolve(`babel-preset-stage-${stage}`));
+    // Decorators are stage 2 but not supported by Babel yet - add the legacy
+    // transform for support in the meantime.
+    if (stage &lt;= 2) {
+      plugins.push(require.resolve('babel-plugin-transform-decorators-legacy'));
+    }
+  }
+
+  // Additional build presets
+  if (Array.isArray(buildPresets)) {
+    buildPresets.forEach(function (preset) {
+      if (preset === 'inferno') {
+        presets.push(require.resolve('../babel-presets/inferno'));
+      } else if (preset === 'preact') {
+        presets.push(require.resolve('../babel-presets/preact'));
+      } else if (preset === 'react') {
+        presets.push(require.resolve('babel-preset-react'));
+        if (process.env.NODE_ENV === 'development') {
+          plugins.push(require.resolve('babel-plugin-transform-react-jsx-source'), require.resolve('babel-plugin-transform-react
+-jsx-self'));
+        }
+      } else if (preset === 'react-hmre') {
+        presets.push(require.resolve('../babel-presets/react-hmre'));
+      } else if (preset === 'react-prod') {
+        presets.push(require.resolve('../babel-presets/react-prod'));
+      } else {
+        throw new Error(`Unknown build preset: ${preset}`);
+      }
+    });
+  }
+
+  if (userPresets) {
+    presets = [].concat(presets, userPresets);
+  }
+
+  var config = { presets };
+
+  plugins = plugins.concat(buildPlugins, userPlugins);
+
+  // The Runtime transform imports various things into a module based on usage.
+  // Turn regenerator on by default to enable use of async/await and generators
+  // without configuration.
+  var runtimeTransformOptions = {
+    helpers: false,
+    polyfill: false,
+    regenerator: true
+  };
+  if (setRuntimePath !== false) {
+    runtimeTransformOptions.moduleName = RUNTIME_PATH;
+  }
+  if (userRuntime !== false) {
+    if (userRuntime === true) {
+      // Enable all features
+      runtimeTransformOptions = {};
+      if (setRuntimePath !== false) {
+        runtimeTransformOptions.moduleName = RUNTIME_PATH;
+      }
+    } else if ((0, _utils.typeOf)(userRuntime) === 'string') {
+      // Enable the named feature
+      runtimeTransformOptions[userRuntime] = true;
+    }
+    plugins.push([require.resolve('babel-plugin-transform-runtime'), runtimeTransformOptions]);
+  }
+
+  // Allow Babel to parse (but not transform) import() when used with Webpack
+  if (webpack) {
+    plugins.push(require.resolve('babel- ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createKarmaConfig" id="apidoc.module.nwb.createKarmaConfig">module nwb.createKarmaConfig</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createKarmaConfig.default" id="apidoc.element.nwb.createKarmaConfig.default">
+        function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>default
+        <span class="apidocSignatureSpan">(args, buildConfig, userConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createKarmaConfig(args, buildConfig, userConfig) {
+  var isCi = process.env.CI || process.env.CONTINUOUS_INTEGRATION;
+  var codeCoverage = isCi || !!args.coverage;
+
+  var userKarma = userConfig.karma || {};
+
+  var _getKarmaPluginConfig = getKarmaPluginConfig({
+    codeCoverage,
+    userConfig: userKarma
+  }),
+      browsers = _getKarmaPluginConfig.browsers,
+      frameworks = _getKarmaPluginConfig.frameworks,
+      plugins = _getKarmaPluginConfig.plugins,
+      reporters = _getKarmaPluginConfig.reporters;
+
+  var _userKarma$excludeFro = userKarma.excludeFromCoverage,
+      excludeFromCoverage = _userKarma$excludeFro === undefined ? DEFAULT_EXCLUDE_FROM_COVERAGE : _userKarma$excludeFro;
+
+  if ((0, _utils.typeOf)(excludeFromCoverage) === 'string') excludeFromCoverage = [excludeFromCoverage];
+  var testFiles = userKarma.testFiles || DEFAULT_TEST_FILES;
+  if ((0, _utils.typeOf)(testFiles) === 'string') testFiles = [testFiles];
+
+  // Polyfill by default for browsers which lack features (hello PhantomJS)
+  var files = [require.resolve('babel-polyfill/dist/polyfill.js')];
+  var preprocessors = {};
+
+  if (userKarma.testContext) {
+    files.push(userKarma.testContext);
+    preprocessors[userKarma.testContext] = ['webpack', 'sourcemap'];
+  } else {
+    testFiles.forEach(function (testGlob) {
+      files.push(testGlob);
+      preprocessors[testGlob] = ['webpack', 'sourcemap'];
+    });
+  }
+
+  // Tweak Babel config for code coverage when necessary
+  buildConfig = _extends({}, buildConfig);
+  if (!buildConfig.babel) {
+    buildConfig.babel = {};
+  }
+  if (codeCoverage) {
+    var exclude = ['node_modules/'].concat(excludeFromCoverage, testFiles);
+    if (userKarma.testContext) {
+      exclude.push(userKarma.testContext);
+    }
+    buildConfig.babel.plugins = [[require.resolve('babel-plugin-istanbul'), { exclude }]];
+  }
+
+  var karmaConfig = (0, _webpackMerge2.default)({
+    browsers,
+    coverageReporter: {
+      dir: _path2.default.resolve('coverage'),
+      reporters: [{ type: 'html', subdir: 'html' }, { type: 'lcovonly', subdir: '.' }, { type: 'text-summary' }]
+    },
+    files,
+    frameworks,
+    mochaReporter: {
+      showDiff: true
+    },
+    plugins,
+    preprocessors,
+    reporters,
+    singleRun: isCi || !args.server,
+    webpack: (0, _createWebpackConfig2.default)((0, _webpackMerge2.default)(buildConfig, {
+      devtool: 'cheap-module-inline-source-map',
+      node: {
+        fs: 'empty'
+      },
+      plugins: {
+        status: {
+          test: true
+        }
+      },
+      resolve: {
+        alias: {
+          expect: _path2.default.dirname(require.resolve('expect/package')),
+          src: _path2.default.resolve('src')
+        }
+      },
+      server: {
+        hot: false
+      }
+    }), (0, _getPluginConfig2.default)(), userConfig),
+    webpackMiddleware: {
+      noInfo: true,
+      quiet: true
+    }
+  }, userKarma.extra);
+
+  (0, _debug2.default)('karma config: %s', (0, _utils.deepToString)(karmaConfig));
+  return karmaConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+var development = process.env.NODE_ENV === 'development';
+var production = process.env.NODE_ENV === 'production';
+
+var plugins = [
+// Enforce case-sensitive import paths
+new _caseSensitivePathsWebpackPlugin2.<span class="apidocCodeKeywordSpan">default</span>(),
+// Replace specified expressions with values
+new _webpack2.default.DefinePlugin(_extends({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+}, buildConfig.define, userConfig.define))];
+
+if (server) {
+  // HMR is enabled by default but can be explicitly disabled
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createKarmaConfig.findPlugin" id="apidoc.element.nwb.createKarmaConfig.findPlugin">
+        function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>findPlugin
+        <span class="apidocSignatureSpan">(plugins, findId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findPlugin(plugins, findId) {
+  for (var i = 0, l = plugins.length; i &lt; l; i++) {
+    if ((0, _utils.typeOf)(plugins[i]) !== 'object') {
+      continue;
+    }
+    if (Object.keys(plugins[i])[0] === findId) {
+      return plugins[i];
+    }
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createKarmaConfig.getKarmaPluginConfig" id="apidoc.element.nwb.createKarmaConfig.getKarmaPluginConfig">
+        function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>getKarmaPluginConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getKarmaPluginConfig() {
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
+      _ref$codeCoverage = _ref.codeCoverage,
+      codeCoverage = _ref$codeCoverage === undefined ? false : _ref$codeCoverage,
+      _ref$userConfig = _ref.userConfig,
+      userConfig = _ref$userConfig === undefined ? {} : _ref$userConfig;
+
+  var browsers = ['PhantomJS'];
+  var frameworks = ['mocha'];
+  var plugins = [require('karma-sourcemap-loader'), require('karma-webpack')];
+  // Default reporter if the user configure their own frameworks
+  var reporters = ['dots'];
+
+  // Browsers, frameworks and reporters can be configured as a list containing
+  // names of bundled plugins, or plugin objects.
+  if (userConfig.browsers) {
+    var _processPluginConfig = processPluginConfig(userConfig.browsers),
+        browserNames = _processPluginConfig[0],
+        browserPlugins = _processPluginConfig[1];
+
+    browsers = browserNames;
+    plugins = plugins.concat(browserPlugins);
+  }
+
+  if (userConfig.frameworks) {
+    var _processPluginConfig2 = processPluginConfig(userConfig.frameworks),
+        frameworkNames = _processPluginConfig2[0],
+        frameworkPlugins = _processPluginConfig2[1];
+
+    frameworks = frameworkNames;
+    plugins = plugins.concat(frameworkPlugins);
+  } else {
+    // Use the Mocha reporter by default if the user didn't configure frameworks
+    reporters = ['mocha'];
+  }
+
+  if (userConfig.reporters) {
+    var _processPluginConfig3 = processPluginConfig(userConfig.reporters),
+        reporterNames = _processPluginConfig3[0],
+        reporterPlugins = _processPluginConfig3[1];
+
+    reporters = reporterNames;
+    plugins = plugins.concat(reporterPlugins);
+  }
+
+  // Plugins can be provided as a list of imported plugin objects
+  if (userConfig.plugins) {
+    plugins = plugins.concat(userConfig.plugins);
+  }
+
+  // Ensure nwb's version of plugins get loaded if they're going to be used and =
+  // haven't been provided by the user.
+  if (frameworks.indexOf('mocha') !== -1 &amp;&amp; !findPlugin(plugins, 'framework:mocha')) {
+    plugins.push(require('karma-mocha'));
+  }
+  if (reporters.indexOf('mocha') !== -1 &amp;&amp; !findPlugin(plugins, 'reporter:mocha')) {
+    plugins.push(require('karma-mocha-reporter'));
+  }
+  if (browsers.indexOf('PhantomJS') !== -1 &amp;&amp; !findPlugin(plugins, 'launcher:PhantomJS')) {
+    plugins.push(require('karma-phantomjs-launcher'));
+  }
+  if (browsers.indexOf('Chrome') !== -1 &amp;&amp; !findPlugin(plugins, 'launcher:Chrome')) {
+    plugins.push(require('karma-chrome-launcher'));
+  }
+
+  if (codeCoverage) {
+    plugins.push(require('karma-coverage'));
+    reporters.push('coverage');
+  }
+
+  return { browsers, frameworks, plugins, reporters };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createKarmaConfig.processPluginConfig" id="apidoc.element.nwb.createKarmaConfig.processPluginConfig">
+        function <span class="apidocSignatureSpan">nwb.createKarmaConfig.</span>processPluginConfig
+        <span class="apidocSignatureSpan">(configs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function processPluginConfig(configs) {
+  var names = [];
+  var plugins = [];
+  configs.forEach(function (config) {
+    if ((0, _utils.typeOf)(config) === 'string') {
+      names.push(config);
+    } else {
+      names.push(Object.keys(config)[0].split(':').pop());
+      plugins.push(config);
+    }
+  });
+  return [names, plugins];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createProject" id="apidoc.module.nwb.createProject">module nwb.createProject</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createProject.default" id="apidoc.element.nwb.createProject.default">
+        function <span class="apidocSignatureSpan">nwb.createProject.</span>default
+        <span class="apidocSignatureSpan">(args, type, name, dir, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createProject(args, type, name, dir, cb) {
+  if (type in APP_PROJECT_CONFIG) {
+    return createAppProject(args, type, name, dir, cb);
+  } else {
+    createModuleProject(args, type, name, dir, cb);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+var development = process.env.NODE_ENV === 'development';
+var production = process.env.NODE_ENV === 'production';
+
+var plugins = [
+// Enforce case-sensitive import paths
+new _caseSensitivePathsWebpackPlugin2.<span class="apidocCodeKeywordSpan">default</span>(),
+// Replace specified expressions with values
+new _webpack2.default.DefinePlugin(_extends({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+}, buildConfig.define, userConfig.define))];
+
+if (server) {
+  // HMR is enabled by default but can be explicitly disabled
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createProject.getNpmModulePrefs" id="apidoc.element.nwb.createProject.getNpmModulePrefs">
+        function <span class="apidocSignatureSpan">nwb.createProject.</span>getNpmModulePrefs
+        <span class="apidocSignatureSpan">(args, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNpmModulePrefs(args, cb) {
+  // An ES6 modules build is enabled by default, but can be disabled with
+  // --no-es-modules or --es-modules=false (or a bunch of other undocumented
+  // stuff)
+  var esModules = args['es-modules'] !== false &amp;&amp; !/^(0|false|no|nope|off)$/.test(args['es-modules']);
+  // Pass a UMD global variable name with --umd=MyThing, or pass --no-umd to
+  // indicate you don't want a UMD build.
+  var umd = (0, _utils.typeOf)(args.umd) === 'string' ? args.umd : false;
+
+  // Don't ask questions if the user doesn't want them, or already told us all
+  // the answers.
+  if (args.f || args.force || 'umd' in args &amp;&amp; 'es-modules' in args) {
+    return process.nextTick(cb, null, { umd, esModules });
+  }
+
+  _inquirer2.default.prompt([{
+    when: function when() {
+      return !('es-modules' in args);
+    },
+    type: 'confirm',
+    name: 'esModules',
+    message: 'Do you want to create an ES6 modules build for use by ES6 bundlers?',
+    default: esModules
+  }, {
+    when: function when() {
+      return !('umd' in args);
+    },
+    type: 'confirm',
+    name: 'createUMD',
+    message: 'Do you want to create a UMD build for global usage via &lt;script&gt; tag?',
+    default: umd
+  }, {
+    when: function when(_ref) {
+      var createUMD = _ref.createUMD;
+      return createUMD;
+    },
+    type: 'input',
+    name: 'umd',
+    message: 'Which global variable should the UMD build set?',
+    validate(input) {
+      return input.trim() ? true : 'Required to create a UMD build';
+    },
+    default: umd || ''
+  }]).then(function (answers) {
+    return cb(null, answers);
+  }, function (err) {
+    return cb(err);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createProject.validateProjectType" id="apidoc.element.nwb.createProject.validateProjectType">
+        function <span class="apidocSignatureSpan">nwb.createProject.</span>validateProjectType
+        <span class="apidocSignatureSpan">(projectType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateProjectType(projectType) {
+  if (!projectType) {
+    throw new _errors.UserError(`A project type must be provided, one of: ${[].concat(_constants.PROJECT_TYPES).join(', ')}`);
+  }
+  if (!_constants.PROJECT_TYPES.has(projectType)) {
+    throw new _errors.UserError(`Project type must be one of: ${[].concat(_constants.PROJECT_TYPES).join(', ')}`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createServeInfernoAppConfig" id="apidoc.module.nwb.createServeInfernoAppConfig">module nwb.createServeInfernoAppConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeInfernoAppConfig.createServeInfernoAppConfig" id="apidoc.element.nwb.createServeInfernoAppConfig.createServeInfernoAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeInfernoAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeInfernoAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['inferno']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    },
+    resolve: {
+      alias: {
+        'react': 'inferno-compat',
+        'react-dom': 'inferno-compat'
+      }
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createServePreactAppConfig" id="apidoc.module.nwb.createServePreactAppConfig">module nwb.createServePreactAppConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServePreactAppConfig.createServePreactAppConfig" id="apidoc.element.nwb.createServePreactAppConfig.createServePreactAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServePreactAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServePreactAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['preact']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    },
+    resolve: {
+      alias: {
+        'react': 'preact-compat/dist/preact-compat',
+        'react-dom': 'preact-compat/dist/preact-compat'
+      }
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createServeReactAppConfig" id="apidoc.module.nwb.createServeReactAppConfig">module nwb.createServeReactAppConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeReactAppConfig.createServeReactAppConfig" id="apidoc.element.nwb.createServeReactAppConfig.createServeReactAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeReactAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeReactAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    babel: {
+      presets: ['react', 'react-hmre']
+    },
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createServeWebAppConfig" id="apidoc.module.nwb.createServeWebAppConfig">module nwb.createServeWebAppConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServeWebAppConfig.createServeWebAppConfig" id="apidoc.element.nwb.createServeWebAppConfig.createServeWebAppConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServeWebAppConfig
+        <span class="apidocSignatureSpan">(args, overrides)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServeWebAppConfig(args, overrides) {
+  var entry = _path2.default.resolve(args._[1] || 'src/index.js');
+  var dist = _path2.default.resolve(args._[2] || 'dist');
+
+  var config = {
+    entry: [_path2.default.resolve(entry)],
+    output: {
+      path: _path2.default.resolve(dist),
+      filename: 'app.js',
+      publicPath: '/'
+    },
+    plugins: {
+      html: (0, _appConfig.getDefaultHTMLConfig)()
+    }
+  };
+
+  if (_glob2.default.sync('public/').length !== 0) {
+    config.plugins.copy = [{ from: _path2.default.resolve('public'), to: dist, ignore: '.gitkeep' }];
+  }
+
+  return (0, _webpackMerge2.default)(config, overrides);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createServerWebpackConfig" id="apidoc.module.nwb.createServerWebpackConfig">module nwb.createServerWebpackConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createServerWebpackConfig.createServerWebpackConfig" id="apidoc.element.nwb.createServerWebpackConfig.createServerWebpackConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>createServerWebpackConfig
+        <span class="apidocSignatureSpan">(args, buildConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServerWebpackConfig(args, buildConfig) {
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var pluginConfig = (0, _getPluginConfig2.default)({ args });
+
+  var entry = buildConfig.entry,
+      output = buildConfig.output,
+      _buildConfig$plugins = buildConfig.plugins,
+      plugins = _buildConfig$plugins === undefined ? {} : _buildConfig$plugins,
+      otherBuildConfig = _objectWithoutProperties(buildConfig, ['entry', 'output', 'plugins']);
+
+  var hotMiddlewareOptions = args.reload ? '?reload=true' : '';
+
+  if (args['auto-install'] || args.install) {
+    plugins.autoInstall = true;
+  }
+
+  return (0, _createWebpackConfig2.default)(_extends({
+    server: true,
+    devtool: 'cheap-module-source-map',
+    entry: [
+    // Polyfill EventSource for IE, as webpack-hot-middleware/client uses it
+    require.resolve('eventsource-polyfill'), require.resolve('webpack-hot-middleware/client') + hotMiddlewareOptions].concat(entry
+),
+    output,
+    plugins
+  }, otherBuildConfig), pluginConfig, userConfig);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.createWebpackConfig" id="apidoc.module.nwb.createWebpackConfig">module nwb.createWebpackConfig</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.createExtraRules" id="apidoc.element.nwb.createWebpackConfig.createExtraRules">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createExtraRules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createExtraRules() {
+  var extraRules = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : [];
+  var userConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  var rule = ruleConfigFactory({}, userConfig);
+  return extraRules.map(function (extraRule) {
+    var id = extraRules.id,
+        ruleConfig = _objectWithoutProperties(extraRules, ['id']);
+
+    return rule(id, ruleConfig);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.createPlugins" id="apidoc.element.nwb.createWebpackConfig.createPlugins">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createPlugins
+        <span class="apidocSignatureSpan">(server)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createPlugins(server) {
+  var buildConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+  var development = process.env.NODE_ENV === 'development';
+  var production = process.env.NODE_ENV === 'production';
+
+  var plugins = [
+  // Enforce case-sensitive import paths
+  new _caseSensitivePathsWebpackPlugin2.default(),
+  // Replace specified expressions with values
+  new _webpack2.default.DefinePlugin(_extends({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+  }, buildConfig.define, userConfig.define))];
+
+  if (server) {
+    // HMR is enabled by default but can be explicitly disabled
+    if (server.hot !== false) {
+      plugins.push(new _webpack2.default.HotModuleReplacementPlugin(), new _webpack2.default.NoEmitOnErrorsPlugin());
+    }
+    if (buildConfig.status) {
+      plugins.push(new _WebpackStatusPlugin2.default(buildConfig.status));
+    }
+    // Use paths as names when serving
+    plugins.push(new _webpack2.default.NamedModulesPlugin());
+  }
+  // If we're not serving, we're creating a static build
+  else {
+      // Extract CSS required as modules out into files
+      var cssFilename = production ? `[name].[contenthash:8].css` : '[name].css';
+      plugins.push(new _extractTextWebpackPlugin2.default(_extends({
+        filename: cssFilename
+      }, userConfig.extractText)));
+
+      // Move modules imported from node_modules/ into a vendor chunk when enabled
+      if (buildConfig.vendor) {
+        plugins.push(new _webpack.optimize.CommonsChunkPlugin({
+          name: 'vendor',
+          minChunks(module, count) {
+            return module.resource &amp;&amp; module.resource.includes('node_modules');
+          }
+        }));
+      }
+
+      // If we're generating an HTML file, we must be building a web app, so
+      // configure deterministic hashing for long-term caching.
+      if (buildConfig.html) {
+        plugins.push(
+        // Generate stable module ids instead of having Webpack assign integers.
+        // HashedModuleIdsPlugin (vendored from Webpack 2) does this without
+        // adding too much to bundle size and NamedModulesPlugin allows for
+        // easier debugging of development builds.
+        development ? new _webpack2.default.NamedModulesPlugin() : new _webpack2.default.HashedModuleIdsPlugin(),
+        // The MD5 Hash plugin seems to make [chunkhash] for .js files behave
+        // like [contenthash] does for extracted .css files, which is essential
+        // for deterministic hashing.
+        new _webpackMd5Hash2.default(),
+        // The Webpack manifest is normally folded into the last chunk, changing
+        // its hash - prevent this by extracting the manifest into its own
+        // chunk - also essential for deterministic hashing.
+        new _webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
+        // Inject the Webpack manifest into the generated HTML as a &lt;script&gt;
+        injectManifestPlugin);
+      }
+    }
+
+  if (production) {
+    plugins.push(new _webpack2.default.LoaderOptionsPlugin({
+      debug: false,
+      minimize: true
+    }));
+    if (userConfig.uglify !== false) {
+      plugins.push(new _webpack.optimize.UglifyJsPlugin((0, _webpackMerge2.default)({
+        compress: {
+          warnings: false
+        },
+        output: {
+          comments: false
+        },
+        sourceMap: true
+      }, userConfig.uglify)));
+    }
+  }
+
+  // Generate an HTML file for web apps which pulls in generated resources
+  if (buildConfig.html) {
+    plugins.push(new _htmlWebpackPlugin2.default(_extends({
+      chunksSortMode: 'dependency',
+      template: _path2.default.join(__dirname, '../templates/webpack-template.html')
+    }, buildConfig.html, userConfig.html)));
+  }
+
+  // Copy static resources
+  if (buildConfig.copy) {
+    plugins.push(new (Function.prototype.bind.apply(_copyWebpackPlugin2.default, [null].concat(getCopyPluginArgs(buildConfig.copy
+, userConfig.copy))))());
+  }
+
+  // Automatically install missing npm dependencies and a ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.createRules" id="apidoc.element.nwb.createWebpackConfig.createRules">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createRules
+        <span class="apidocSignatureSpan">(server)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRules(server) {
+  var buildConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var userWebpackConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+  var pluginConfig = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : {};
+
+  var rule = ruleConfigFactory(buildConfig, userWebpackConfig.rules);
+
+  // Default options for url-loader
+  var urlLoaderOptions = {
+    // Don't inline anything by default
+    limit: 1,
+    // Always use a hash to prevent files with the same name causing issues
+    name: '[name].[hash:8].[ext]'
+  };
+
+  var rules = [rule('babel', {
+    test: /\.js$/,
+    loader: require.resolve('babel-loader'),
+    exclude: process.env.NWB_TEST ? /(node_modules|nwb[\\/]polyfills\.js$)/ : /node_modules/,
+    options: {
+      // Don't look for .babelrc files
+      babelrc: false,
+      // Cache transformations to the filesystem (in default temp dir)
+      cacheDirectory: true
+    }
+  }), rule('css-pipeline', {
+    test: /\.css$/,
+    use: createStyleLoaders(rule, server, userWebpackConfig),
+    exclude: /node_modules/
+  }), rule('vendor-css-pipeline', {
+    test: /\.css$/,
+    use: createStyleLoaders(rule, server, userWebpackConfig, {
+      prefix: 'vendor'
+    }),
+    include: /node_modules/
+  }), rule('graphics', {
+    test: /\.(gif|png|webp)$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  }), rule('svg', {
+    test: /\.svg$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  }), rule('jpeg', {
+    test: /\.jpe?g$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  }), rule('fonts', {
+    test: /\.(eot|otf|ttf|woff|woff2)$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  }), rule('video', {
+    test: /\.(mp4|ogg|webm)$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  }), rule('audio', {
+    test: /\.(wav|mp3|m4a|aac|oga)(\?.*)?$/,
+    loader: require.resolve('url-loader'),
+    options: _extends({}, urlLoaderOptions)
+  })].concat(createExtraRules(buildConfig.extra, userWebpackConfig.rules));
+
+  if (pluginConfig.cssPreprocessors) {
+    Object.keys(pluginConfig.cssPreprocessors).forEach(function (id) {
+      var _pluginConfig$cssPrep = pluginConfig.cssPreprocessors[id],
+          test = _pluginConfig$cssPrep.test,
+          preprocessorLoader = _pluginConfig$cssPrep.loader;
+
+      rules.push(rule(`${id}-pipeline`, {
+        test,
+        use: createStyleLoaders(rule, server, userWebpackConfig, {
+          prefix: id,
+          preprocessor: { id, config: { loader: preprocessorLoader } }
+        }),
+        exclude: /node_modules/
+      }));
+      rules.push(rule(`vendor-${id}-pipeline`, {
+        test,
+        use: createStyleLoaders(rule, server, userWebpackConfig, {
+          prefix: `vendor-${id}`,
+          preprocessor: { id, config: { loader: preprocessorLoader } }
+        }),
+        include: /node_modules/
+      }));
+    });
+  }
+
+  return rules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.createStyleLoaders" id="apidoc.element.nwb.createWebpackConfig.createStyleLoaders">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>createStyleLoaders
+        <span class="apidocSignatureSpan">(loader, server, userWebpackConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createStyleLoaders(loader, server, userWebpackConfig) {
+  var _ref2 = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : {},
+      _ref2$preprocessor = _ref2.preprocessor,
+      preprocessor = _ref2$preprocessor === undefined ? null : _ref2$preprocessor,
+      _ref2$prefix = _ref2.prefix,
+      prefix = _ref2$prefix === undefined ? null : _ref2$prefix;
+
+  var name = styleRuleName(prefix);
+  var styleLoader = loader(name('style'), {
+    loader: require.resolve('style-loader')
+  });
+  var loaders = [loader(name('css'), {
+    loader: require.resolve('css-loader'),
+    options: {
+      // Apply postcss-loader to @imports
+      importLoaders: 1
+    }
+  }), loader(name('postcss'), {
+    loader: require.resolve('postcss-loader'),
+    options: {
+      plugins: createDefaultPostCSSPlugins(userWebpackConfig)
+    }
+  }, { ident: true })];
+
+  if (preprocessor) {
+    loaders.push(loader(name(preprocessor.id), preprocessor.config, { ident: true }));
+  }
+
+  if (server) {
+    loaders.unshift(styleLoader);
+    return loaders;
+  } else {
+    return _extractTextWebpackPlugin2.default.extract({
+      fallbackLoader: styleLoader,
+      loader: loaders
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.default" id="apidoc.element.nwb.createWebpackConfig.default">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>default
+        <span class="apidocSignatureSpan">(buildConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createWebpackConfig(buildConfig) {
+  var nwbPluginConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+  (0, _debug2.default)('createWebpackConfig buildConfig: %s', (0, _utils.deepToString)(buildConfig));
+
+  // Final webpack config is primarily driven by build configuration for the nwb
+  // command being run. Each command configures a default, working webpack
+  // configuration for the task it needs to perform.
+
+  var _buildConfig$babel = buildConfig.babel,
+      buildBabelConfig = _buildConfig$babel === undefined ? {} : _buildConfig$babel,
+      entry = buildConfig.entry,
+      buildOutputConfig = buildConfig.output,
+      buildPolyfill = buildConfig.polyfill,
+      _buildConfig$plugins = buildConfig.plugins,
+      buildPluginConfig = _buildConfig$plugins === undefined ? {} : _buildConfig$plugins,
+      _buildConfig$resolve = buildConfig.resolve,
+      buildResolveConfig = _buildConfig$resolve === undefined ? {} : _buildConfig$resolve,
+      _buildConfig$rules = buildConfig.rules,
+      buildRulesConfig = _buildConfig$rules === undefined ? {} : _buildConfig$rules,
+      _buildConfig$server = buildConfig.server,
+      server = _buildConfig$server === undefined ? false : _buildConfig$server,
+      otherBuildConfig = _objectWithoutProperties(buildConfig, ['babel', 'entry', 'output', 'polyfill', 'plugins', 'resolve', 'rules
+', 'server']);
+
+  var userWebpackConfig = userConfig.webpack || {};
+  var userOutputConfig = {};
+  if ('publicPath' in userWebpackConfig) {
+    userOutputConfig.publicPath = userWebpackConfig.publicPath;
+  }
+  var userResolveConfig = {};
+  if (userWebpackConfig.aliases) {
+    userResolveConfig.alias = userWebpackConfig.aliases;
+  }
+
+  // Generate config for babel-loader and set it as loader config for the build
+  buildRulesConfig.babel = { options: (0, _createBabelConfig2.default)(buildBabelConfig, userConfig.babel) };
+
+  var webpackConfig = _extends({
+    module: {
+      rules: createRules(server, buildRulesConfig, userWebpackConfig, nwbPluginConfig)
+    },
+    output: _extends({}, buildOutputConfig, userOutputConfig),
+    plugins: createPlugins(server, buildPluginConfig, userWebpackConfig),
+    resolve: (0, _webpackMerge2.default)({
+      extensions: ['.js', '.json']
+    }, buildResolveConfig, userResolveConfig),
+    resolveLoader: {
+      modules: ['node_modules',
+      // As of v2.25.0, html-webpack-plugin no longer outputs an absolute path
+      // to its loader, so we must fall back to nwb's node_modules/ for global
+      // usage.
+      _path2.default.join(__dirname, '../node_modules')]
+    }
+  }, otherBuildConfig);
+
+  if (entry) {
+    // Add default polyfills to the entry chunk unless configured not to
+    if (buildPolyfill !== false &amp;&amp; userConfig.polyfill !== false) {
+      addPolyfillsToEntry(entry);
+    }
+    webpackConfig.entry = entry;
+  }
+
+  // Create and merge compatibility configuration into the generated config if
+  // specified.
+  if (userWebpackConfig.compat) {
+    var compatConfig = getCompatConfig(userWebpackConfig.compat);
+    if (compatConfig) {
+      webpackConfig = (0, _webpackMerge2.default)(webpackConfig, compatConfig);
+    }
+  }
+
+  // Any extra user webpack config is merged into the generated config to give
+  // them even more control.
+  if (userWebpackConfig.extra) {
+    webpackConfig = (0, _webpackMerge2.default)(webpackConfig, userWebpackConfig.extra);
+  }
+
+  return webpackConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+var development = process.env.NODE_ENV === 'development';
+var production = process.env.NODE_ENV === 'production';
+
+var plugins = [
+// Enforce case-sensitive import paths
+new _caseSensitivePathsWebpackPlugin2.<span class="apidocCodeKeywordSpan">default</span>(),
+// Replace specified expressions with values
+new _webpack2.default.DefinePlugin(_extends({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+}, buildConfig.define, userConfig.define))];
+
+if (server) {
+  // HMR is enabled by default but can be explicitly disabled
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.getCompatConfig" id="apidoc.element.nwb.createWebpackConfig.getCompatConfig">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>getCompatConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCompatConfig() {
+  var userCompatConfig = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  var configs = [];
+  Object.keys(userCompatConfig).map(function (lib) {
+    if (!userCompatConfig[lib]) return;
+    var compatConfig = COMPAT_CONFIGS[lib];
+    if ((0, _utils.typeOf)(compatConfig) === 'function') {
+      compatConfig = compatConfig(userCompatConfig[lib]);
+      if (!compatConfig) return;
+    }
+    configs.push(compatConfig);
+  });
+  if (configs.length === 0) return null;
+  if (configs.length === 1) return _extends({}, configs[0]);
+  return _webpackMerge2.default.apply(undefined, configs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.mergeRuleConfig" id="apidoc.element.nwb.createWebpackConfig.mergeRuleConfig">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>mergeRuleConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mergeRuleConfig() {
+  var defaultConfig = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+  var buildConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+  var rule = replaceArrayMerge(defaultConfig, buildConfig, userConfig);
+  if (rule.options &amp;&amp; Object.keys(rule.options).length === 0) {
+    delete rule.options;
+  }
+  return rule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.ruleConfigFactory" id="apidoc.element.nwb.createWebpackConfig.ruleConfigFactory">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>ruleConfigFactory
+        <span class="apidocSignatureSpan">(buildConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ruleConfigFactory(buildConfig) {
+  var userConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  return function (id, defaultConfig) {
+    var _ref = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {},
+        _ref$ident = _ref.ident,
+        ident = _ref$ident === undefined ? false : _ref$ident;
+
+    if (id) {
+      var rule = mergeRuleConfig(defaultConfig, buildConfig[id], userConfig[id]);
+      if (ident &amp;&amp; rule.options) {
+        rule.options.ident = id;
+      }
+      return rule;
+    }
+    return defaultConfig;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.createWebpackConfig.styleRuleName" id="apidoc.element.nwb.createWebpackConfig.styleRuleName">
+        function <span class="apidocSignatureSpan">nwb.createWebpackConfig.</span>styleRuleName
+        <span class="apidocSignatureSpan">(prefix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function styleRuleName(prefix) {
+  return function (name) {
+    if (prefix &amp;&amp; prefix.endsWith(name)) {
+      return prefix;
+    }
+    return prefix ? `${prefix}-${name}` : name;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.debug" id="apidoc.module.nwb.debug">module nwb.debug</a></h1>
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.debug.debug" id="apidoc.element.nwb.debug.debug">
+        function <span class="apidocSignatureSpan">nwb.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &lt; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if ('string' !== typeof args[0]) {
+    // anything else let's inspect with %O
+    args.unshift('%O');
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don't increase the array index
+    if (match === '%%') return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if ('function' === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it's inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.devServer" id="apidoc.module.nwb.devServer">module nwb.devServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.devServer.devServer" id="apidoc.element.nwb.devServer.devServer">
+        function <span class="apidocSignatureSpan">nwb.</span>devServer
+        <span class="apidocSignatureSpan">(webpackConfig, _ref, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function server(webpackConfig, _ref, cb) {
+  var fallback = _ref.fallback,
+      host = _ref.host,
+      port = _ref.port,
+      staticPath = _ref.staticPath;
+
+  var app = (0, _express2.default)();
+  var compiler = (0, _webpack2.default)(webpackConfig);
+
+  if (fallback !== false) {
+    app.use((0, _connectHistoryApiFallback2.default)());
+  }
+
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    quiet: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  }));
+
+  app.use(require('webpack-hot-middleware')(compiler, {
+    log: false
+  }));
+
+  function onServerStart(err) {
+    if (err) return cb(err);
+  }
+
+  // Only provide host config if it was explicitly specified by the user
+  if (host) {
+    app.listen(port, host, onServerStart);
+  } else {
+    app.listen(port, onServerStart);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.errors" id="apidoc.module.nwb.errors">module nwb.errors</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.errors.ConfigValidationError" id="apidoc.element.nwb.errors.ConfigValidationError">
+        function <span class="apidocSignatureSpan">nwb.errors.</span>ConfigValidationError
+        <span class="apidocSignatureSpan">(report)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ConfigValidationError(report) {
+  _classCallCheck(this, ConfigValidationError);
+
+  this.report = report;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (userConfig.webpack.extra.resolve &amp;&amp; userConfig.webpack.extra.resolve.alias) {
+    report.hint('webpack.extra.resolve.alias', `You can use the more convenient ${_chalk2.default.green('webpack.
+aliases')} instead.`);
+    checkForRedundantCompatAliases(userConfig.type, userConfig.webpack.extra.resolve.alias, 'webpack.extra.resolve.alias'
+;, report);
+  }
+}
+
+if (report.hasErrors()) {
+  throw new _errors.<span class="apidocCodeKeywordSpan">ConfigValidationError</span>(report);
+}
+if (check) {
+  throw report;
+}
+if (report.hasSomethingToReport()) {
+  report.log();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.errors.KarmaExitCodeError" id="apidoc.element.nwb.errors.KarmaExitCodeError">
+        function <span class="apidocSignatureSpan">nwb.errors.</span>KarmaExitCodeError
+        <span class="apidocSignatureSpan">(exitCode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function KarmaExitCodeError(exitCode) {
+  _classCallCheck(this, KarmaExitCodeError);
+
+  this.exitCode = exitCode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // Force the environment to test
+  process.env.NODE_ENV = 'test';
+
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var karmaConfig = (0, _createKarmaConfig2.default)(args, buildConfig, userConfig);
+
+  new _karma.Server(karmaConfig, function (exitCode) {
+    if (exitCode !== 0) return cb(new _errors.<span class="apidocCodeKeywordSpan">KarmaExitCodeError</span>(exitCode));
+    cb();
+  }).start();
+}
+module.exports = exports['default'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.errors.UserError" id="apidoc.element.nwb.errors.UserError">
+        function <span class="apidocSignatureSpan">nwb.errors.</span>UserError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UserError() {
+  _classCallCheck(this, UserError);
+
+  for (var _len = arguments.length, messages = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    messages[_key] = arguments[_key];
+  }
+
+  this.message = messages.join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+ * Validate a user-supplied project type.
+ */
+function validateProjectType(projectType) {
+  if (!projectType) {
+    throw new _errors.<span class="apidocCodeKeywordSpan">UserError</span>(`A project type must be provided, one of: ${[].concat
+(_constants.PROJECT_TYPES).join(', ')}`);
+  }
+  if (!_constants.PROJECT_TYPES.has(projectType)) {
+    throw new _errors.UserError(`Project type must be one of: ${[].concat(_constants.PROJECT_TYPES).join(', ')}`);
+  }
+}
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.express" id="apidoc.module.nwb.express">module nwb.express</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.express.express" id="apidoc.element.nwb.express.express">
+        function <span class="apidocSignatureSpan">nwb.</span>express
+        <span class="apidocSignatureSpan">(express)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nwbMiddleware(express) {
+  var options = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+
+  (0, _assert2.default)(express &amp;&amp; typeof express.Router === 'function', 'The express module must be passed as the first argument
+ to nwb middleware');
+
+  // We need to do an intial grab of the user config to determine the project
+  // type.
+  var userConfig = (0, _getUserConfig2.default)({ _: ['serve'], config: options.config }, { required: true });
+  if (!SERVE_APP_CONFIG[userConfig.type]) {
+    throw new Error(`nwb Express middleware is unable to serve anything for a ${userConfig.type} project.`);
+  }
+
+  var createServeAppConfig = require(SERVE_APP_CONFIG[userConfig.type]);
+
+  // Use options to create an object equivalent to CLI args parsed by minimist
+  var args = {
+    _: [`serve-${userConfig.type}`, options.entry],
+    config: options.config,
+    install: !!options.install || !!options.autoInstall,
+    reload: !!options.reload
+  };
+
+  var webpackConfig = (0, _createServerWebpackConfig2.default)(args, createServeAppConfig(args, {
+    plugins: {
+      status: {
+        middleware: true
+      }
+    }
+  }));
+
+  (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+  var compiler = (0, _webpack2.default)(webpackConfig);
+
+  var router = express.Router();
+
+  router.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    quiet: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  }));
+
+  router.use(require('webpack-hot-middleware')(compiler, {
+    log: false
+  }));
+
+  return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.getPluginConfig" id="apidoc.module.nwb.getPluginConfig">module nwb.getPluginConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getPluginConfig.getPluginConfig" id="apidoc.element.nwb.getPluginConfig.getPluginConfig">
+        function <span class="apidocSignatureSpan">nwb.</span>getPluginConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPluginConfig() {
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
+      _ref$args = _ref.args,
+      args = _ref$args === undefined ? {} : _ref$args,
+      _ref$cwd = _ref.cwd,
+      cwd = _ref$cwd === undefined ? process.cwd() : _ref$cwd;
+
+  var plugins = [];
+
+  try {
+    var pkgPlugins = plugins.concat(getPackagePlugins(cwd));
+    (0, _debug2.default)('%s nwb-* dependencies in package.json', pkgPlugins.length);
+    plugins = plugins.concat(pkgPlugins);
+  } catch (e) {
+    // pass
+  }
+
+  var argsPlugins = (0, _utils.getArgsPlugins)(args);
+  if (argsPlugins.length !== 0) {
+    (0, _debug2.default)('%s plugins in arguments', argsPlugins.length);
+    plugins = plugins.concat(argsPlugins);
+  }
+
+  if (plugins.length === 0) {
+    return {};
+  }
+
+  plugins = (0, _utils.unique)(plugins);
+  (0, _debug2.default)('nwb plugins: %o', plugins);
+
+  var pluginConfig = {};
+  plugins.forEach(function (plugin) {
+    var pluginModule = require(_resolve2.default.sync(plugin, { basedir: cwd }));
+    pluginConfig = (0, _webpackMerge2.default)(pluginConfig, pluginModule);
+  });
+
+  (0, _debug2.default)('plugin config: %s', (0, _utils.deepToString)(pluginConfig));
+
+  return pluginConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.getUserConfig" id="apidoc.module.nwb.getUserConfig">module nwb.getUserConfig</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getUserConfig.UserConfigReport" id="apidoc.element.nwb.getUserConfig.UserConfigReport">
+        function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>UserConfigReport
+        <span class="apidocSignatureSpan">(configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UserConfigReport(configPath) {
+  _classCallCheck(this, UserConfigReport);
+
+  this.configPath = configPath;
+  this.deprecations = [];
+  this.errors = [];
+  this.hints = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getUserConfig.default" id="apidoc.element.nwb.getUserConfig.default">
+        function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>default
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getUserConfig() {
+  var args = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+  var options = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var _options$check = options.check,
+      check = _options$check === undefined ? false : _options$check,
+      _options$required = options.required,
+      required = _options$required === undefined ? DEFAULT_REQUIRED : _options$required;
+  // Try to load default user config, or use a config file path we were given
+
+  var userConfig = {};
+  var userConfigPath = _path2.default.resolve(args.config || _constants.CONFIG_FILE_NAME);
+
+  // Bail early if a config file is required and doesn't exist
+  var configFileExists = _glob2.default.sync(userConfigPath).length !== 0;
+  if ((args.config || required) &amp;&amp; !configFileExists) {
+    throw new Error(`Couldn't find a config file at ${userConfigPath}`);
+  }
+
+  // If a config file exists, it should be a valid module regardless of whether
+  // or not it's required.
+  if (configFileExists) {
+    try {
+      userConfig = require(userConfigPath);
+      (0, _debug2.default)('imported config module from %s', userConfigPath);
+      // Delete the file from the require cache as some builds need to import
+      // it multiple times with a different NODE_ENV in place.
+      delete require.cache[userConfigPath];
+    } catch (e) {
+      throw new Error(`Couldn't import the config file at ${userConfigPath}: ${e.message}\n${e.stack}`);
+    }
+  }
+
+  return processUserConfig({ args, check, required, userConfig, userConfigPath });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var userConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+var development = process.env.NODE_ENV === 'development';
+var production = process.env.NODE_ENV === 'production';
+
+var plugins = [
+// Enforce case-sensitive import paths
+new _caseSensitivePathsWebpackPlugin2.<span class="apidocCodeKeywordSpan">default</span>(),
+// Replace specified expressions with values
+new _webpack2.default.DefinePlugin(_extends({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+}, buildConfig.define, userConfig.define))];
+
+if (server) {
+  // HMR is enabled by default but can be explicitly disabled
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getUserConfig.prepareWebpackRuleConfig" id="apidoc.element.nwb.getUserConfig.prepareWebpackRuleConfig">
+        function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>prepareWebpackRuleConfig
+        <span class="apidocSignatureSpan">(rules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prepareWebpackRuleConfig(rules) {
+  Object.keys(rules).forEach(function (ruleId) {
+    var rule = rules[ruleId];
+    if (rule.options) return;
+
+    var exclude = rule.exclude,
+        include = rule.include,
+        test = rule.test,
+        options = _objectWithoutProperties(rule, ['exclude', 'include', 'test']); // eslint-disable-line no-unused-vars
+
+
+    if (Object.keys(options).length &gt; 0) {
+      rule.options = options;
+      Object.keys(options).forEach(function (prop) {
+        return delete rule[prop];
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.getUserConfig.processUserConfig" id="apidoc.element.nwb.getUserConfig.processUserConfig">
+        function <span class="apidocSignatureSpan">nwb.getUserConfig.</span>processUserConfig
+        <span class="apidocSignatureSpan">(_ref4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function processUserConfig(_ref4) {
+  var args = _ref4.args,
+      _ref4$check = _ref4.check,
+      check = _ref4$check === undefined ? false : _ref4$check,
+      _ref4$required = _ref4.required,
+      required = _ref4$required === undefined ? DEFAULT_REQUIRED : _ref4$required,
+      userConfig = _ref4.userConfig,
+      userConfigPath = _ref4.userConfigPath;
+
+  // Config modules can export a function if they need to access the current
+  // command or the webpack dependency nwb manages for them.
+  if ((0, _utils.typeOf)(userConfig) === 'function') {
+    userConfig = userConfig({
+      args,
+      command: args._[0],
+      webpack: _webpack2.default
+    });
+  }
+
+  var report = new UserConfigReport(userConfigPath);
+
+  if ((required || 'type' in userConfig) &amp;&amp; !_constants.PROJECT_TYPES.has(userConfig.type)) {
+    report.error('type', userConfig.type, `Must be one of: ${[].concat(_constants.PROJECT_TYPES).join(', ')}`);
+  }
+
+  // Set defaults for config objects so we don't have to existence-check them
+  // everywhere.
+  void ['babel', 'karma', 'npm', 'webpack'].forEach(function (prop) {
+    if (!(prop in userConfig)) userConfig[prop] = {};
+  });
+
+  // Babel config
+  if (!!userConfig.babel.stage || userConfig.babel.stage === 0) {
+    if ((0, _utils.typeOf)(userConfig.babel.stage) !== 'number') {
+      report.error('babel.stage', userConfig.babel.stage, `Must be a ${_chalk2.default.cyan('Number')} between ${_chalk2.default
+.cyan('0')} and ${_chalk2.default.cyan('3')}, ` + `or ${_chalk2.default.cyan('false')} to disable use of a stage preset.`);
+    } else if (userConfig.babel.stage &lt; 0 || userConfig.babel.stage &gt; 3) {
+      report.error('babel.stage', userConfig.babel.stage, `Must be between ${_chalk2.default.cyan(0)} and ${_chalk2.default.cyan
+(3)}`);
+    }
+  }
+  if (userConfig.babel.presets &amp;&amp; (0, _utils.typeOf)(userConfig.babel.presets) !== 'array') {
+    report.error('babel.presets', userConfig.babel.presets, `Must be an ${_chalk2.default.cyan('Array')}`);
+  }
+  if (userConfig.babel.plugins &amp;&amp; (0, _utils.typeOf)(userConfig.babel.plugins) !== 'array') {
+    report.error('babel.plugins', userConfig.babel.plugins, `Must be an ${_chalk2.default.cyan('Array')}`);
+  }
+  if ('runtime' in userConfig.babel &amp;&amp; (0, _utils.typeOf)(userConfig.babel.runtime) !== 'boolean' &amp;&amp; !BABEL_RUNTIME_OPTIONS.has(
+userConfig.babel.runtime)) {
+    report.error('babel.runtime', userConfig.babel.runtime, `Must be ${_chalk2.default.cyan('boolean')}, ${_chalk2.default.cyan("'
+helpers'")} or ${_chalk2.default.cyan("'polyfill'")})`);
+  }
+
+  if ('loose' in userConfig.babel) {
+    if ((0, _utils.typeOf)(userConfig.babel.loose) !== 'boolean') {
+      report.error('babel.loose', userConfig.babel.loose, `Must be ${_chalk2.default.cyan('boolean')}`);
+    } else if (userConfig.babel.loose === true) {
+      report.hint('babel.loose', 'Loose mode is enabled by default, so you can remove this config.');
+    }
+  }
+
+  // Karma config
+  // TODO Remove in a future version
+  if (userConfig.karma.testDir || userConfig.karma.testDirs) {
+    // We secretly supported passing testDir too
+    var prop = userConfig.karma.testDir ? 'testDir' : 'testDirs';
+    if (!warnedAboutKarmaTestDirs) {
+      report.deprecated(`karma.${prop}`, `Deprecated as of nwb v0.15 - this has been renamed to ${_chalk2.default.green('karma.excludeFromCoverage
+')}.`);
+      warnedAboutKarmaTestDirs = true;
+    }
+    userConfig.karma.excludeFromCoverage = userConfig.karma[prop];
+    delete userConfig.karma[prop];
+  }
+
+  // npm build config
+  if ((0, _utils.typeOf)(userConfig.npm.umd) === 'string') {
+    userConfig.npm.umd = { global: userConfig.npm.umd };
+  }
+
+  // Webpack config
+  if ((0, _utils.typeOf)(userConfig.webpack.autoprefixer) === 'string') {
+    userConfig.webpack.autoprefixer = { browsers: userConfig.webpack.autoprefixer };
+  }
+
+  if ('copy' in userConfig.webpack) {
+    if ((0, _utils.typeOf)(userConfig.webpack.copy) === 'array') {
+      userConfig.webpack.copy = { patterns: userConfig.webpack.copy };
+    } else if ((0, _utils.typeOf)(userConfig.webpack.copy) === 'object') {
+      if (!userCo ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.karmaServer" id="apidoc.module.nwb.karmaServer">module nwb.karmaServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.karmaServer.karmaServer" id="apidoc.element.nwb.karmaServer.karmaServer">
+        function <span class="apidocSignatureSpan">nwb.</span>karmaServer
+        <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function karmaServer(args, buildConfig, cb) {
+  // Force the environment to test
+  process.env.NODE_ENV = 'test';
+
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var karmaConfig = (0, _createKarmaConfig2.default)(args, buildConfig, userConfig);
+
+  new _karma.Server(karmaConfig, function (exitCode) {
+    if (exitCode !== 0) return cb(new _errors.KarmaExitCodeError(exitCode));
+    cb();
+  }).start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.moduleBuild" id="apidoc.module.nwb.moduleBuild">module nwb.moduleBuild</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.moduleBuild.moduleBuild" id="apidoc.element.nwb.moduleBuild.moduleBuild">
+        function <span class="apidocSignatureSpan">nwb.</span>moduleBuild
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moduleBuild(args) {
+  var buildConfig = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var cb = arguments[2];
+
+  // XXX Babel doesn't support passing the path to a babelrc file any more
+  if (_glob2.default.sync('.babelrc').length &gt; 0) {
+    throw new _errors.UserError('Unable to build the module as there is a .babelrc in your project', 'nwb needs to write a temporary
+ .babelrc to configure the build');
+  }
+
+  var src = _path2.default.resolve('src');
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var copyFiles = !!args['copy-files'];
+
+  var tasks = [function (cb) {
+    return (0, _cleanModule2.default)(args, cb);
+  }, function (cb) {
+    return runBabel('ES5', { copyFiles, outDir: _path2.default.resolve('lib'), src }, (0, _webpackMerge2.default)(buildConfig.babel
+, buildConfig.babelDev || {}, {
+      // Don't force ES5 users of the ES5 build to eat a .require
+      commonJSInterop: true,
+      // Transpile modules to CommonJS for ES5 users
+      modules: 'commonjs',
+      // Don't set the path to nwb's babel-runtime, as it will need to be a
+      // peerDependency of your module if you use transform-runtime's helpers
+      // option.
+      setRuntimePath: false,
+      // Don't enable webpack-specific plugins
+      webpack: false
+    }), userConfig.babel, cb);
+  }];
+
+  // The ES6 modules build is enabled by default, and must be explicitly
+  // disabled if you don't want it.
+  if (userConfig.npm.esModules !== false) {
+    tasks.push(function (cb) {
+      return runBabel('ES6 modules', { copyFiles, outDir: _path2.default.resolve('es'), src }, (0, _webpackMerge2.default)(buildConfig
+.babel, buildConfig.babelDev || {}, {
+        // Don't set the path to nwb's babel-runtime, as it will need to be a
+        // peerDependency of your module if you use transform-runtime's helpers
+        // option.
+        setRuntimePath: false,
+        // Don't enable webpack-specific plugins
+        webpack: false
+      }), userConfig.babel, cb);
+    });
+  }
+
+  // The UMD build must be explicitly enabled
+  if (userConfig.npm.umd) {
+    tasks.push(function (cb) {
+      return buildUMD(args, buildConfig, userConfig, cb);
+    });
+  }
+
+  (0, _runSeries2.default)(tasks, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.utils" id="apidoc.module.nwb.utils">module nwb.utils</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.clean" id="apidoc.element.nwb.utils.clean">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>clean
+        <span class="apidocSignatureSpan">(desc, dirs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clean(desc, dirs, cb) {
+  (0, _glob2.default)(`+(${dirs.join('|')})/`, function (err, dirs) {
+    if (err) return cb(err);
+    if (dirs.length === 0) return cb();
+    var spinner = (0, _ora2.default)(`Cleaning ${desc}`).start();
+    (0, _runSeries2.default)(dirs.map(function (dir) {
+      return function (cb) {
+        return (0, _rimraf2.default)(dir, cb);
+      };
+    }), function (err) {
+      if (err) {
+        spinner.fail();
+        return cb(err);
+      }
+      spinner.succeed();
+      cb();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.clearConsole" id="apidoc.element.nwb.utils.clearConsole">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>clearConsole
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clearConsole() {
+  // XXX Hack for testing
+  // TODO Give users a way to disable console clearing
+  if (process.env.NWB_TEST) return;
+  // This will completely wipe scrollback in cmd.exe on Windows - use cmd.exe's
+  // `start` command to launch nwb's dev server in a new prompt if you don't
+  // want to lose it.
+  process.stdout.write(process.platform === 'win32' ? '\x1Bc' : '\x1B[2J\x1B[3J\x1B[H');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!this.test) {
+    console.log(message);
+  }
+};
+
+StatusPlugin.prototype.watchRun = function watchRun(watching, cb) {
+  if (!this.middleware) {
+    this.<span class="apidocCodeKeywordSpan">clearConsole</span>();
+  }
+  if (this.initial) {
+    this.log(_chalk2.default.cyan('Starting Webpack compilation...'));
+    this.initial = false;
+  } else {
+    this.log('Recompiling...');
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.deepToString" id="apidoc.element.nwb.utils.deepToString">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>deepToString
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepToString(object) {
+  return _util2.default.inspect(object, { colors: true, depth: null });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.getArgsPlugins" id="apidoc.element.nwb.utils.getArgsPlugins">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>getArgsPlugins
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getArgsPlugins(args) {
+  var plugins = args.plugins || args.plugin;
+  if (!plugins) return [];
+  return plugins.split(',').map(function (name) {
+    return name.replace(/^(nwb-)?/, 'nwb-');
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.install" id="apidoc.element.nwb.utils.install">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>install
+        <span class="apidocSignatureSpan">(packages, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function install(packages, options, cb) {
+  if (typeOf(options) === 'function') {
+    cb = options;
+    options = {};
+  }
+  var _options = options,
+      _options$args = _options.args,
+      args = _options$args === undefined ? null : _options$args,
+      _options$check = _options.check,
+      check = _options$check === undefined ? false : _options$check,
+      _options$cwd = _options.cwd,
+      cwd = _options$cwd === undefined ? process.cwd() : _options$cwd,
+      _options$dev = _options.dev,
+      dev = _options$dev === undefined ? false : _options$dev,
+      _options$save = _options.save,
+      save = _options$save === undefined ? false : _options$save;
+
+  // If the command being run allows users to specify an nwb plugins option by
+  // providing the args object here, make sure they're installed.
+
+  if (args) {
+    packages = packages.concat(getArgsPlugins(args));
+  }
+
+  if (check) {
+    packages = packages.filter(function (pkg) {
+      // Assumption: we're not dealing with scoped packages, which start with @
+      var name = pkg.split('@')[0];
+      try {
+        _resolve2.default.sync(name, { basedir: cwd });
+        return false;
+      } catch (e) {
+        return true;
+      }
+    });
+  }
+
+  if (packages.length === 0) {
+    return process.nextTick(cb);
+  }
+
+  var npmArgs = ['install', '--silent', '--no-progress'];
+
+  if (save) {
+    npmArgs.push(`--save${dev ? '-dev' : ''}`);
+  }
+
+  npmArgs = npmArgs.concat(packages);
+
+  (0, _debug2.default)(`${cwd} $ npm ${npmArgs.join(' ')}`);
+  var spinner = (0, _ora2.default)(`Installing ${joinAnd(packages)}`).start();
+  var npm = (0, _crossSpawn2.default)('npm', npmArgs, { cwd, stdio: ['ignore', 'pipe', 'inherit'] });
+  npm.on('close', function (code) {
+    if (code !== 0) {
+      spinner.fail();
+      return cb(new Error('npm install failed'));
+    }
+    spinner.succeed();
+    cb();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.joinAnd" id="apidoc.element.nwb.utils.joinAnd">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>joinAnd
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function joinAnd(array) {
+  if (array.length === 0) return '';
+  if (array.length === 1) return String(array[0]);
+  return `${array.slice(0, -1).join(', ')} and ${array[array.length - 1]}`;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.toSource" id="apidoc.element.nwb.utils.toSource">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>toSource
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toSource(obj) {
+  return JSON.stringify(obj, null, 2).replace(/"([^"]+)":/g, '$1:').replace(/"/g, "'");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.typeOf" id="apidoc.element.nwb.utils.typeOf">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>typeOf
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function typeOf(o) {
+  if (Number.isNaN(o)) return 'nan';
+  return Object.prototype.toString.call(o).slice(8, -1).toLowerCase();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.utils.unique" id="apidoc.element.nwb.utils.unique">
+        function <span class="apidocSignatureSpan">nwb.utils.</span>unique
+        <span class="apidocSignatureSpan">(strings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unique(strings) {
+  // eslint-disable-next-line
+  return Object.keys(strings.reduce(function (o, s) {
+    return o[s] = true, o;
+  }, {}));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.webpackBuild" id="apidoc.module.nwb.webpackBuild">module nwb.webpackBuild</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackBuild.webpackBuild" id="apidoc.element.nwb.webpackBuild.webpackBuild">
+        function <span class="apidocSignatureSpan">nwb.</span>webpackBuild
+        <span class="apidocSignatureSpan">(name, args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function webpackBuild(name, args, buildConfig, cb) {
+  if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = 'production';
+  }
+
+  var userConfig = (0, _getUserConfig2.default)(args);
+  var pluginConfig = (0, _getPluginConfig2.default)({ args });
+  if (typeof buildConfig == 'function') {
+    buildConfig = buildConfig(args);
+  }
+
+  var webpackConfig = (0, _createWebpackConfig2.default)(buildConfig, pluginConfig, userConfig);
+
+  (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+  var spinner = void 0;
+  if (name) {
+    spinner = (0, _ora2.default)(`Building ${name}`).start();
+  }
+  var compiler = (0, _webpack2.default)(webpackConfig);
+  compiler.run(function (err, stats) {
+    if (err) {
+      if (spinner) {
+        spinner.fail();
+      }
+      return cb(err);
+    }
+    if (spinner) {
+      (0, _webpackUtils.logBuildResults)(stats, spinner);
+    }
+    cb(null, stats);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.webpackServer" id="apidoc.module.nwb.webpackServer">module nwb.webpackServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackServer.webpackServer" id="apidoc.element.nwb.webpackServer.webpackServer">
+        function <span class="apidocSignatureSpan">nwb.</span>webpackServer
+        <span class="apidocSignatureSpan">(args, buildConfig, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function webpackServer(args, buildConfig, cb) {
+  // Default environment to development - we also run the dev server while
+  // testing to check that HMR works.
+  if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = 'development';
+  }
+
+  if (typeof buildConfig == 'function') {
+    buildConfig = buildConfig(args);
+  }
+
+  // Other config can be provided by the user via the CLI
+  getServerOptions(args, function (err, options) {
+    if (err) return cb(err);
+    if (options === null) return cb();
+
+    if (!('status' in buildConfig.plugins)) {
+      buildConfig.plugins.status = {
+        message: `The app is running at http://${options.host || 'localhost'}:${options.port}/`
+      };
+    }
+
+    var webpackConfig = (0, _createServerWebpackConfig2.default)(args, buildConfig);
+
+    (0, _debug2.default)('webpack config: %s', (0, _utils.deepToString)(webpackConfig));
+
+    (0, _devServer2.default)(webpackConfig, options, cb);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nwb.webpackUtils" id="apidoc.module.nwb.webpackUtils">module nwb.webpackUtils</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackUtils.createBanner" id="apidoc.element.nwb.webpackUtils.createBanner">
+        function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>createBanner
+        <span class="apidocSignatureSpan">(pkg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createBanner(pkg) {
+  var banner = `${pkg.name} v${pkg.version}`;
+  if (pkg.homepage) {
+    banner += ` - ${pkg.homepage}`;
+  }
+  if (pkg.license) {
+    banner += `\n${pkg.license} Licensed`;
+  }
+  return banner;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackUtils.createExternals" id="apidoc.element.nwb.webpackUtils.createExternals">
+        function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>createExternals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createExternals() {
+  var externals = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+
+  return Object.keys(externals).reduce(function (webpackExternals, packageName) {
+    var globalName = externals[packageName];
+    webpackExternals[packageName] = {
+      root: globalName,
+      commonjs2: packageName,
+      commonjs: packageName,
+      amd: packageName
+    };
+    return webpackExternals;
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackUtils.logBuildResults" id="apidoc.element.nwb.webpackUtils.logBuildResults">
+        function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logBuildResults
+        <span class="apidocSignatureSpan">(stats, spinner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function logBuildResults(stats, spinner) {
+  if (stats.hasErrors()) {
+    if (spinner) {
+      spinner.fail();
+      console.log();
+    }
+    logErrorsAndWarnings(stats);
+  } else if (stats.hasWarnings()) {
+    if (spinner) {
+      spinner.stopAndPersist(_chalk2.default.yellow(_figures2.default.warning));
+      console.log();
+    }
+    logErrorsAndWarnings(stats);
+    console.log();
+    logGzippedFileSizes(stats);
+  } else {
+    if (spinner) {
+      spinner.succeed();
+      console.log();
+    }
+    logGzippedFileSizes(stats);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackUtils.logErrorsAndWarnings" id="apidoc.element.nwb.webpackUtils.logErrorsAndWarnings">
+        function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logErrorsAndWarnings
+        <span class="apidocSignatureSpan">(stats)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function logErrorsAndWarnings(stats) {
+  // Show fewer error details
+  var json = stats.toJson({}, true);
+
+  var formattedErrors = formatMessages(json.errors, _chalk2.default.bgRed.white(' ERROR '));
+  var formattedWarnings = formatMessages(json.warnings, _chalk2.default.bgYellow.black(' WARNING '));
+
+  if (stats.hasErrors()) {
+    var errors = formattedErrors.length;
+    console.log(_chalk2.default.red(`Failed to compile with ${errors} error${s(errors)}.`));
+    if (formattedErrors.some(isLikelyASyntaxError)) {
+      // If there are any syntax errors, show just them.
+      // This prevents a confusing ESLint parsing error preceding a much more
+      // useful Babel syntax error.
+      formattedErrors = formattedErrors.filter(isLikelyASyntaxError);
+    }
+    formattedErrors.forEach(function (message) {
+      console.log();
+      console.log(message);
+    });
+    return;
+  }
+
+  if (stats.hasWarnings()) {
+    var warnings = formattedWarnings.length;
+    console.log(_chalk2.default.yellow(`Compiled with ${warnings} warning${s(warnings)}.`));
+    formattedWarnings.forEach(function (message) {
+      console.log();
+      console.log(message);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nwb.webpackUtils.logGzippedFileSizes" id="apidoc.element.nwb.webpackUtils.logGzippedFileSizes">
+        function <span class="apidocSignatureSpan">nwb.webpackUtils.</span>logGzippedFileSizes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function logGzippedFileSizes() {
+  for (var _len = arguments.length, stats = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    stats[_key] = arguments[_key];
+  }
+
+  var files = stats.reduce(function (files, stats) {
+    return files.concat(getFileDetails(stats));
+  }, []).filter(function (_ref) {
+    var name = _ref.name;
+    return !/^manifest\.[a-z\d]+\.js$/.test(name);
+  });
+
+  var longest = files.reduce(function (max, _ref2) {
+    var dir = _ref2.dir,
+        name = _ref2.name;
+
+    var length = (dir + name).length;
+    return length &gt; max ? length : max;
+  }, 0);
+  var pad = function pad(dir, name) {
+    return Array(longest - (dir + name).length + 1).join(' ');
+  };
+
+  console.log(`File size${s(files.length)} after gzip:`);
+  console.log();
+
+  files.sort(function (a, b) {
+    return b.size - a.size;
+  }).forEach(function (_ref3) {
+    var dir = _ref3.dir,
+        name = _ref3.name,
+        sizeLabel = _ref3.sizeLabel;
+
+    console.log(`  ${_chalk2.default.dim(`${dir}${_path2.default.sep}`)}${_chalk2.default.cyan(name)}` + `  ${pad(dir, name)}${_chalk2
+.default.green(sizeLabel)}`);
+  });
+
+  console.log();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
