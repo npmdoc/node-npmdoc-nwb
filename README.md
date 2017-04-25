@@ -1,4 +1,7 @@
-# api documentation for  [nwb (v0.15.6)](https://github.com/insin/nwb#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nwb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nwb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nwb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nwb)
+# npmdoc-nwb
+
+#### basic api documentation for  [nwb (v0.15.6)](https://github.com/insin/nwb#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nwb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nwb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nwb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nwb)
+
 #### A toolkit for React, Preact & Inferno apps, React libraries and other npm modules for the web, with no configuration (until you need it)
 
 [![NPM](https://nodei.co/npm/nwb.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/nwb)
